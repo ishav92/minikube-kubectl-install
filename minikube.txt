@@ -1,0 +1,56 @@
+
+=======================================================================
+
+minikube and kubectl install method -
+----------------------------------
+
+https://www.youtube.com/watch?v=ZTO1doC8SOc
+docs.docker.com/engine/install/ubuntu/
+
+
+1 sudo apt-get update -y
+2 sudo apt-get upgrade -y
+3 sudo apt-get install curl
+4 sudo apt-get install apt-transport-https
+5 sudo apt install conntrack
+
+Install docker:
+
+1 curl -fsSL https://get.docker.com -o get-docker.sh
+2 sudo sh get-docker.sh
+3 ls -l var/run/docker.sock
+4 sudo usermod -aG docker $USER && newgrp docker
+
+Minikube:
+
+    2 ls -l
+    3  ls
+    4  ls -l var/run/docker.sock
+    5  docker version
+    6  less docker version
+    7  docker version less
+   19  ls
+   20  curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+   21  ls
+   22  sudo mv minikube-linux-amd64 /usr/local/bin/minikube
+   23  sudo shmod +x /usr/local/bin/minikube
+   24  sudo chmod +x /usr/local/bin/minikube
+   25  ls -l
+   26  ls -l /usr/local/bin/minikube
+   27  minikube version --short
+   30  curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+   31  ls
+   32  ls -l
+   33  sudo mv kubectl /usr/local/bin/kubectl
+   34  sudo chmod +x /usr/local/bin/kubectl
+   35  ls -l
+   36  ls -l /usr/local/bin/kubectl
+   37  kubectl version --client
+   38  minikube start
+   39  minikube status
+   40  kubectl cluster-info
+   41  kubectl cluster-info dump
+   42  minikube ip
+
+
+
