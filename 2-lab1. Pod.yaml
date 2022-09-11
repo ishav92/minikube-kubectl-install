@@ -14,13 +14,17 @@
    14  kubectl describe pod webapp
    15  kubectl get pods
    16  kubectl delete pod webapp
-   17  kubectl run redis --image redis123
+   17  kubectl run redis --image redis123    or    # kubectl run redis --image=redis123 --dry-run -o yaml  
+                                             or    # kubectl run redis --image=redis123 --dry-run=client -o yaml  
+                                             now   # kubectl run redis --image=redis123 --dry-run=client -o yaml > pod.yaml 
+                        [no need to make yamal file as yaml file with image will be created automtically and direct to pod.yamal by > ]   
+                        
    18  vi pod.yaml
    19  kubectl get pods
    20  kubectl delete redis
-   21  kubectl delete pod redis
+   21  kubectl delete pod redis          [ instead of 21-22 we can make changes to pod.yaml and # kubectl apply -f pod.yaml ]
    22  kubectl create -f pod.yaml
-   23  vi pod.yaml
+   23  vi pod.yaml                          
    24  kubectl create -f pod.yaml
    25  kubectl get nodes
    26  kubectl get pods
