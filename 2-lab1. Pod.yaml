@@ -5,7 +5,7 @@
     5  kubectl get pods
     6  docker ps
     7  docker images
-    8  kubectl describe pods newpods-rr1pb
+    8  kubectl describe pods newpods-rr1pb   or    # kubectl get pods -o wide
     9  kubectl describe pod newpods-rrlpb
    10  kubectl get nodes
    11  kubectl get pods
