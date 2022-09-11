@@ -1,0 +1,60 @@
+
+   44  minikube start
+   45  kubectl get nodes
+   46  kubectl info
+   47  kubectl version
+   48  kubectl get nodes
+   49  kubectl get pods
+   
+  # create pods via run command:
+  
+   50  kubectl run nginx --image nginx
+   51  kubectl get pods
+   52  kubectl redis --image redis
+   53  kubectl run redis --iamge dipesh
+   54  kubectl get pods
+   55  kubectl run nginx --image dipesh
+   56  kubectl run dipesh --image dipesh
+   57  kubectl get pods
+   
+   # Delete pods
+   
+   58  kubectl delete pod dipesh
+   
+   # create pods via Yaml file (kind) :
+   
+   59  vi pod.yaml
+   60  kubectl create -f pod.yaml
+   61  kubectl get pods
+   62  kubectl create -f pod.yaml
+   63  kubectl get pods
+   64  kubectl delete pod nginx
+   65  cat pod.yaml
+   66  vi pod1.yaml
+   67  kubectl create -f pod1.yaml
+   68  kubectl get pods
+   69  docker ps
+   70  cat pod1.yaml
+   71  vi pod2.yaml
+   72  kubectl delete pod nginx
+   73  kubectl get pods
+   74  kubectl create -f pod2.yaml
+   75  kubectl get pods
+   76  kubectl get nginx
+   77  kubectl delete pod nginx
+   78  vi pod3.yaml
+   
+   # create pods replica sets:
+   
+   79  kubectl create -f pod3.yaml
+   80  kubectl get pods
+   81  vi pod3.yaml
+   82  kubectl create -f pod3.yaml
+   83  kubectl get pods
+   84  vi pod3.yaml
+   85  kubectl get pods
+   86  kubectl create -f pod3.yaml
+   87  kubectl get nodes
+   88  kubectl get pods
+   89  kubectl delete pod nginx-5qz9v
+   90  kubectl get pods
