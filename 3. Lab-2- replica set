@@ -1,3 +1,49 @@
+creating repllica-
+
+74  cat pod1.yaml
+   75  kubectl get pods
+   76  kubectl edit pod my-app-pod
+   77  kubectl get nodes
+   78  kubectl get pods
+   79  cat replica.yaml
+   80  kubectl create -f replica.yaml
+   81  vim replica.yaml
+   82  kubectl create -f replica.yaml
+   83  vim replica.yaml
+   84  kubectl create -f replica.yaml
+   85  kubectl get pods
+   86  rubectl get replication controller
+   87  kubectl get replicationcontroller
+   88  cat replica.yaml
+   89  kubectl get pods
+   90  cat replica.yaml
+   91  kubectl get pods
+   92  kubectl delete pod myapp-rc-d45c8
+   93  kubectl get pods
+   94  cat pod1.yaml
+   95  cat pod2.yaml
+   96  cat pod3.yaml
+   97  cat pod4.yaml
+   98  cat pod.yaml
+   99  kubectl get pods
+  100  cat replica.yaml
+  101  vim replicaset.yaml
+  102  kubectl create replicaset.yaml
+  103  kubectl create -f replicaset.yaml
+  104  vim replicaset.yaml
+  105  kubectl create -f replicaset.yaml
+  106  kubectl create -f replicaset.yaml --validate=false
+  107  vim replicaset.yaml
+  108  kubectl create -f replicaset.yaml
+  109  vim replicaset.yaml
+  110  kubectl create -f replicaset.yaml
+  111  cat replicaset.yaml
+  112  kubectl get replicaset
+  113  kubectl get pods
+--------------------------------------------------
+
+scaling - 
+
 
 
 
@@ -38,3 +84,34 @@ spec:
   replicas: 3
 
 ----------------------------------------------------------
+
+2. replicaset 
+
+cat replicaset.yaml
+
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: myapp-replicaset
+  labels:
+    app: myapp
+    type: front-end
+
+spec:
+  template:
+
+    metadata:
+      name: myapp-pod
+      labels:
+        app: myapp
+        type: front-end
+
+    spec:
+      containers:
+      - name: nginx-container
+        image: nginx
+  replicas: 3
+  selector:
+    matchLabels:
+      type: front-end
+------------------------------------------------------
