@@ -1,0 +1,37 @@
+   1  kubectl get pods
+    2  kubectl run --image nginx
+    3  kubectl run nginx --image nginx
+    4  kubectl get pods
+    5  kubectl get pods
+    6  docker ps
+    7  docker images
+    8  kubectl describe pods newpods-rr1pb
+    9  kubectl describe pod newpods-rrlpb
+   10  kubectl get nodes
+   11  kubectl get pods
+   12  kubectl describe pod webapp
+   13  kubectl get pods
+   14  kubectl describe pod webapp
+   15  kubectl get pods
+   16  kubectl delete pod webapp
+   17  kubectl run redis --image redis123
+   18  vi pod.yaml
+   19  kubectl get pods
+   20  kubectl delete redis
+   21  kubectl delete pod redis
+   22  kubectl create -f pod.yaml
+   23  vi pod.yaml
+   24  kubectl create -f pod.yaml
+   25  kubectl get nodes
+   26  kubectl get pods
+   27  vi pod.yaml
+   28  kubectl get pods
+   29  vi pod.yaml
+   30  kubectl description pod redis
+   31  kubectl describe pod redis
+   32  kubectl delete pod redis123
+   33  kubectl get pods
+   34  kubectl delete pod redis
+   35  kubectl create -f pod.yaml
+   36  kubectl get pods
+   37  history
