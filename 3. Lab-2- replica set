@@ -42,8 +42,22 @@ creating repllica-
   113  kubectl get pods
 --------------------------------------------------
 
-scaling - 
+SCALING - sale to 6 replicas from 3
 
+  117  vim replicaset.yaml   [change replica: 6] [save]
+  118  kubectl replace -f replicaset.yaml
+  119  kubectl get replicaset
+  120  kubectl get pods
+  121  history
+  
+  OR
+  
+  122  kubectl scale --replicas=5 -f replicaset.yaml
+  123  cat replicaset.yaml
+  124  kubectl get replicaset
+  125  history
+
+-------------------------------------------------
 
 
 
