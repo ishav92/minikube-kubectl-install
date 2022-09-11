@@ -50,12 +50,17 @@ SCALING - sale to 6 replicas from 3
   120  kubectl get pods
   121  history
   
-  OR
-  
+ OR 
   122  kubectl scale --replicas=5 -f replicaset.yaml
   123  cat replicaset.yaml
   124  kubectl get replicaset
   125  history
+
+OR
+  126  kubectl scale --replicas=6 replicaset myapp-replicaset  [by name instead of yaml file]
+  127  kubectl get nodes
+  128  kubectl get pods
+  129  history
 
 -------------------------------------------------
 
