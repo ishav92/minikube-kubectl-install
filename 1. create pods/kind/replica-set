@@ -58,3 +58,75 @@
    88  kubectl get pods
    89  kubectl delete pod nginx-5qz9v
    90  kubectl get pods
+-----------------------------------------------------------------------------------------
+
+1. cat pod1.yaml
+
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx
+  labels:
+    batch: c34
+
+spec:
+  containers:
+  - image: nginx
+    name: nginx
+  - image: redis
+    name: redis
+----------------------------------------------------
+
+2. cat pod2.yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx
+  labels:
+    batch: c34
+
+spec:
+  containers:
+  - image: nginx
+    name: nginx
+  - image: nginx
+    name: nginx1
+-----------------------------------------------------
+
+3. cat pod3.yaml
+
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: nginx
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      batch: c34
+  template:
+    metadata:
+      name: nginx
+      labels:
+        batch: c34
+    spec:
+      containers:
+      - image: nginx
+        name: nginx
+--------------------------------------------------------
+
+4. cat pod4.yaml
+
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: basic-cluster
+  region: us-east-1
+
+nodeGroups:
+  - name: ng-1
+    instanceType: t2.medium
+    desiredCapacity: 2
+
