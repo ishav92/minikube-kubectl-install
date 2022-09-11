@@ -8,3 +8,9 @@ https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/
 
 Minikube:
 https://minikube.sigs.k8s.io/docs/start/
+
+EKS:
+https://docs.aws.amazon.com/eks/latest/userguide/eksctl.html
+
+AWS-CLI:
+https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
