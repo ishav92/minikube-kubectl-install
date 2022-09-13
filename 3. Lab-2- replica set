@@ -183,3 +183,19 @@ spec:
       - name: nginx
         image: nginx
         ------------------------------------------------------------------------
+4. pod-defination file 
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: simple-webapp
+  labels:
+    app: app1
+    function: frontend
+
+spec:
+  containers:
+  - name: simple-webapp
+    image: simple-webapp
+    ports:
+      - containerPort: 8080
