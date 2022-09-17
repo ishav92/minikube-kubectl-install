@@ -1,3 +1,5 @@
+LOGS-  kubectl logs my-app --all-containers
+
 
    44  minikube start
    45  kubectl get nodes
